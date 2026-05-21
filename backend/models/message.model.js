@@ -1,0 +1,38 @@
+const mongoose = require("mongoose");
+
+const messageSchema = new mongoose.Schema(
+  {
+    rentalId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Rental",
+      required: true,
+      index: true
+    },
+
+    senderId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      index: true
+    },
+
+    receiverId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      index: true
+    },
+
+    text: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 1000
+    }
+  },
+  {
+    timestamps: true
+  }
+);
+
+module.exports = mongoose.model("Message", messageSchema);

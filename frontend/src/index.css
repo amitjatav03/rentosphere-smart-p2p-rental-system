@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@source "../node_modules/flowbite-datepicker";
+
+
+
+@font-face {
+    font-family: gilroy;
+    src: url(./assets/fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+    font-family: gilroy-bold;
+    src: url(./assets/fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: golos;
+    src: url(./assets/fonts/GolosText-VariableFont_wght.ttf);
+}
+
+
+.active-btn {
+    font-weight: 700;
+}
